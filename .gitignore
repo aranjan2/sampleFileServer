@@ -3,3 +3,4 @@
 *.iml
 targer/*
 assignment.iml
+fs-cli/target/
