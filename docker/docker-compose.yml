@@ -1,11 +1,15 @@
-version: '0.1'
+version: '3.7'
 services:
   
   woven-fs-server:
+    expose:
+      - 8080
+    ports:
+    - "8080:8080"
     build:
       context: ..
       dockerfile: docker/Dockerfile
       args:
-        JAR_FILE: 
+        JAR_FILE: fileServer/target/fileServer-*-SNAPSHOT.jar
     image: abhishek/woven-assingnment
 
