@@ -1,0 +1,11 @@
+version: '0.1'
+services:
+  
+  woven-fs-server:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      args:
+        JAR_FILE: 
+    image: abhishek/woven-assingnment
+

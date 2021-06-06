@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.woven                                                                                      .assignment' is invalid and this project uses 'com.woven.assignment' instead.
+* The original package name 'com.com.woven                                                                                      .assignment' is invalid and this project uses 'com.com.woven.assignment' instead.
 
 # Getting Started
 
