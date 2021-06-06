@@ -20,6 +20,22 @@ public class WebFSCommandImpl implements FSCommand {
   @Override
   public void upload(String fileName) {
     logger.log(Level.FINE,"uploading file" + fileName);
+    HttpHeaders headers = new HttpHeaders();
+    headers.setContentType(MediaType.MULTIPART_FORM_DATA);
+
+    MultiValueMap<String, Object> body
+            = new LinkedMultiValueMap<>();
+    body.add("file", fileName);
+    HttpEntity<MultiValueMap<String, Object>> requestEntity
+            = new HttpEntity<>(body, headers);
+
+
+
+    String serverUrl = "http://localhost:8080/uploadFile";
+
+    RestTemplate restTemplate = new RestTemplate();
+    ResponseEntity<String> response = restTemplate
+            .postForEntity(serverUrl, requestEntity, String.class);
 
 
   }

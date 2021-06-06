@@ -23,7 +23,7 @@ public class FileSystemCli implements Callable<Integer> {
 
   @Override
   public Integer call() throws Exception { // your business logic goes here...
-    switch (operation) {
+    switch (operation.toUpperCase()) {
       case "DELETE":
         fsCommand.delete(param);
         break;
