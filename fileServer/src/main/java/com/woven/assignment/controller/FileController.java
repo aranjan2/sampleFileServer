@@ -33,7 +33,7 @@ public class FileController {
     Logger logger = LoggerFactory.getLogger(FileController.class);
     private final StorageService storageService;
     private final String dnsName = "localhost:8080/files/";
-    private final long MAX_FILE_SIZE = 512;//51_200_000;
+    private final long MAX_FILE_SIZE = 51_200_000;
 
     public FileController(StorageService storageService) {
         this.storageService = storageService;
