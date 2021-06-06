@@ -12,7 +12,7 @@
 		<version>2.5.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.com.woven                                                                                      </groupId>
+	<groupId>com.woven</groupId>
 	<artifactId>assignment</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>assignment</name>
