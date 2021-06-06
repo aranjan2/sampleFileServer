@@ -1,0 +1,112 @@
+611   23:45:10.500 INFO  c.u.screenrecorder.UiEntry - launchURLnull
+3043  23:45:12.932 INFO  c.u.controller.MainController - Initialising, Version Major: 13 Minor: 0 Patch: 0
+3044  23:45:12.933 INFO  c.u.controller.MainController - ***SYSTEM INFO START*********************
+3046  23:45:12.935 INFO  c.u.controller.MainController - sun.cpu.isalist: pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86
+3047  23:45:12.936 INFO  c.u.controller.MainController - sun.desktop: windows
+3048  23:45:12.937 INFO  c.u.controller.MainController - sun.io.unicode.encoding: UnicodeLittle
+3048  23:45:12.937 INFO  c.u.controller.MainController - sun.cpu.endian: little
+3048  23:45:12.937 INFO  c.u.controller.MainController - java.vendor.url.bug: http://bugreport.sun.com/bugreport/
+3048  23:45:12.937 INFO  c.u.controller.MainController - file.separator: \
+3049  23:45:12.938 INFO  c.u.controller.MainController - java.vendor: Oracle Corporation
+3049  23:45:12.938 INFO  c.u.controller.MainController - sun.boot.class.path: C:\Program Files (x86)\Java\jre1.8.0_66\lib\resources.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\rt.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jsse.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jce.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\charsets.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jfr.jar;C:\Program Files (x86)\Java\jre1.8.0_66\classes
+3050  23:45:12.939 INFO  c.u.controller.MainController - java.ext.dirs: C:\Program Files (x86)\Java\jre1.8.0_66\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+3051  23:45:12.940 INFO  c.u.controller.MainController - java.version: 1.8.0_66
+3052  23:45:12.941 INFO  c.u.controller.MainController - java.vm.info: mixed mode, sharing
+3053  23:45:12.942 INFO  c.u.controller.MainController - awt.toolkit: sun.awt.windows.WToolkit
+3054  23:45:12.943 INFO  c.u.controller.MainController - user.language: en
+3054  23:45:12.943 INFO  c.u.controller.MainController - java.specification.vendor: Oracle Corporation
+3055  23:45:12.944 INFO  c.u.controller.MainController - java.home: C:\Program Files (x86)\Java\jre1.8.0_66
+3055  23:45:12.944 INFO  c.u.controller.MainController - sun.arch.data.model: 32
+3056  23:45:12.945 INFO  c.u.controller.MainController - java.vm.specification.version: 1.8
+3056  23:45:12.945 INFO  c.u.controller.MainController - java.class.path: C:\Users\Abhishek\AppData\Roaming\User Conversion Ltd\Screen Recorder\ScreenRecorder.exe;
+3057  23:45:12.946 INFO  c.u.controller.MainController - user.name: Abhishek
+3057  23:45:12.946 INFO  c.u.controller.MainController - file.encoding: Cp1252
+3057  23:45:12.946 INFO  c.u.controller.MainController - java.specification.version: 1.8
+3058  23:45:12.947 INFO  c.u.controller.MainController - java.awt.printerjob: sun.awt.windows.WPrinterJob
+3058  23:45:12.947 INFO  c.u.controller.MainController - user.timezone: Asia/Calcutta
+3058  23:45:12.947 INFO  c.u.controller.MainController - user.home: C:\Users\Abhishek
+3059  23:45:12.948 INFO  c.u.controller.MainController - os.version: 10.0
+3060  23:45:12.949 INFO  c.u.controller.MainController - sun.management.compiler: HotSpot Client Compiler
+3061  23:45:12.950 INFO  c.u.controller.MainController - java.specification.name: Java Platform API Specification
+3061  23:45:12.950 INFO  c.u.controller.MainController - java.class.version: 52.0
+3062  23:45:12.951 INFO  c.u.controller.MainController - sun.awt.enableExtraMouseButtons: true
+3062  23:45:12.951 INFO  c.u.controller.MainController - java.library.path: C:\Users\Abhishek\AppData\Roaming\User Conversion Ltd\Screen Recorder;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\sbt\bin;C:\Program Files\Git\cmd;C:\Program Files\Amazon\AWSCLI\;C:\Program Files\nodejs\;C:\WINDOWS\System32\OpenSSH\;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;C:\Users\Abhishek\AppData\Roaming\npm;C:\Program Files (x86)\SoftForum\XecureHSM\;;C:\Program Files (x86)\Java\jre1.8.0_66\bin;.
+3062  23:45:12.951 INFO  c.u.controller.MainController - sun.jnu.encoding: Cp1252
+3063  23:45:12.952 INFO  c.u.controller.MainController - os.name: Windows 10
+3063  23:45:12.952 INFO  c.u.controller.MainController - user.variant: 
+3064  23:45:12.953 INFO  c.u.controller.MainController - java.vm.specification.vendor: Oracle Corporation
+3064  23:45:12.953 INFO  c.u.controller.MainController - java.io.tmpdir: C:\Users\Abhishek\AppData\Local\Temp\
+3064  23:45:12.953 INFO  c.u.controller.MainController - line.separator: 
+
+3064  23:45:12.953 INFO  c.u.controller.MainController - java.endorsed.dirs: C:\Program Files (x86)\Java\jre1.8.0_66\lib\endorsed
+3065  23:45:12.954 INFO  c.u.controller.MainController - os.arch: x86
+3065  23:45:12.954 INFO  c.u.controller.MainController - javafx.runtime.version: 8.0.66-b33
+3065  23:45:12.954 INFO  c.u.controller.MainController - java.awt.graphicsenv: sun.awt.Win32GraphicsEnvironment
+3065  23:45:12.954 INFO  c.u.controller.MainController - java.runtime.version: 1.8.0_66-b18
+3066  23:45:12.955 INFO  c.u.controller.MainController - java.vm.specification.name: Java Virtual Machine Specification
+3066  23:45:12.955 INFO  c.u.controller.MainController - user.dir: C:\Users\Abhishek\AppData\Roaming\User Conversion Ltd\Screen Recorder
+3066  23:45:12.955 INFO  c.u.controller.MainController - user.country: IN
+3067  23:45:12.956 INFO  c.u.controller.MainController - user.script: 
+3067  23:45:12.956 INFO  c.u.controller.MainController - sun.os.patch.level: 
+3067  23:45:12.956 INFO  c.u.controller.MainController - java.vm.name: Java HotSpot(TM) Client VM
+3067  23:45:12.956 INFO  c.u.controller.MainController - file.encoding.pkg: sun.io
+3067  23:45:12.956 INFO  c.u.controller.MainController - path.separator: ;
+3068  23:45:12.957 INFO  c.u.controller.MainController - java.vm.vendor: Oracle Corporation
+3068  23:45:12.957 INFO  c.u.controller.MainController - java.vendor.url: http://java.oracle.com/
+3068  23:45:12.957 INFO  c.u.controller.MainController - sun.boot.library.path: C:\Program Files (x86)\Java\jre1.8.0_66\bin
+3068  23:45:12.957 INFO  c.u.controller.MainController - java.vm.version: 25.66-b18
+3068  23:45:12.957 INFO  c.u.controller.MainController - java.runtime.name: Java(TM) SE Runtime Environment
+3068  23:45:12.957 INFO  c.u.controller.MainController - javafx.version: 8.0.66
+3068  23:45:12.957 INFO  c.u.controller.MainController - ***SYSTEM INFO END**********************
+3069  23:45:12.958 INFO  c.u.controller.MainController - Bundle set Major: 13 Minor: 0 Patch: 0
+3133  23:45:13.022 INFO  c.u.controller.MainController - microphoneTester = new MicrophoneTester(volumeBar);
+3232  23:45:13.121 INFO  c.u.controller.MainController - List<String> microphoneNames = new ArrayList<>(
+                AudioRecorder.getAvailableMicrophoneDevicesMap().keySet());
+3237  23:45:13.126 INFO  c.u.controller.MainController - Collections.sort(microphoneNames);
+3238  23:45:13.127 INFO  c.u.controller.MainController - microphonesComboBox.getItems().addAll(microphoneNames);
+3238  23:45:13.127 INFO  c.u.controller.MainController - microphonesComboBox.valueProperty().addListener(
+                (ov, oldValue, newValue) -> switchMicrophone(newValue)
+        );
+3239  23:45:13.128 INFO  c.u.controller.MainController - microphonesComboBox.managedProperty().bind(microphonesComboBox.visibleProperty());
+3240  23:45:13.129 INFO  c.u.controller.MainController - installerLink.setOnAction(event -> handleHyperLinkAction(event));
+3241  23:45:13.130 INFO  c.u.controller.MainController - currentState.addListener((obs, oldVal, newVal) -> {
+3652  23:45:13.541 INFO  c.u.controller.MainController - collapsed.set(false);
+3652  23:45:13.541 INFO  c.u.controller.MainController - newVal:DOWNLOADING_TASKS
+3655  23:45:13.544 INFO  c.u.controller.MainController - Entered removeHelpSigns
+3828  23:45:13.717 INFO  c.u.controller.MainController - putWidgetInBottomCorner
+3872  23:45:13.761 INFO  c.u.controller.MainController - putWidgetInBottomCorner
+3873  23:45:13.762 INFO  c.u.controller.MainController - loadSessionData - start
+3875  23:45:13.764 INFO  c.u.controller.MainController - loadSessionData - end
+3875  23:45:13.764 INFO  c.u.controller.MainController - Getting SessionDataSource
+3911  23:45:13.800 INFO  c.u.controller.MainController - putWidgetInBottomCorner
+3947  23:45:13.836 INFO  c.u.controller.MainController - putWidgetInBottomCorner
+4150  23:45:14.039 INFO  c.u.controller.MainController - Instantiate progressMonitor
+4153  23:45:14.042 INFO  c.u.controller.MainController - Checking version
+4154  23:45:14.043 INFO  c.u.d.OperationalSessionDataSource - Getting server version from https://usertest.io/Version
+5864  23:45:15.753 INFO  c.u.controller.MainController - Getting session data
+5864  23:45:15.753 INFO  c.u.d.OperationalSessionDataSource - Getting session data from https://usertest.io/api/appsession?t=1546107315753
+6477  23:45:16.366 ERROR c.u.d.OperationalSessionDataSource - Session Id is 0
+6482  23:45:16.371 ERROR c.u.d.OperationalSessionDataSource - FileNotFoundException about to be thrown
+java.io.FileNotFoundException: null
+	at com.userconversion.data.OperationalSessionDataSource.readSessionData(OperationalSessionDataSource.java:192)
+	at com.userconversion.data.OperationalSessionDataSource.getSessionData(OperationalSessionDataSource.java:101)
+	at com.userconversion.controller.MainController.lambda$loadSessionData$31(MainController.java:1124)
+	at java.lang.Thread.run(Unknown Source)
+6484  23:45:16.373 ERROR c.u.d.OperationalSessionDataSource - Session not found
+java.io.FileNotFoundException: null
+	at com.userconversion.data.OperationalSessionDataSource.readSessionData(OperationalSessionDataSource.java:192)
+	at com.userconversion.data.OperationalSessionDataSource.getSessionData(OperationalSessionDataSource.java:101)
+	at com.userconversion.controller.MainController.lambda$loadSessionData$31(MainController.java:1124)
+	at java.lang.Thread.run(Unknown Source)
+6486  23:45:16.375 ERROR c.u.d.OperationalSessionDataSource - Local settings not found
+6489  23:45:16.378 ERROR c.u.controller.MainController - previous session data doesn't exist
+6489  23:45:16.378 INFO  c.u.controller.MainController - collapsed.set(false);
+6490  23:45:16.379 ERROR c.u.controller.MainController - Unable to get session data.
+java.io.FileNotFoundException: null
+	at com.userconversion.controller.MainController.lambda$loadSessionData$31(MainController.java:1133)
+	at java.lang.Thread.run(Unknown Source)
+6490  23:45:16.379 INFO  c.u.controller.MainController - newVal:NO_SESSION
+6591  23:45:16.480 INFO  c.u.controller.MainController - putWidgetInBottomCorner
+6801  23:45:16.690 INFO  c.u.data.RemoteClientLogger - Uploaded exception and trace to url: https://usertest.io/api/logclientexception?id=-1&resolution=-1x-1&platform=Windows+10
+17034 23:45:26.923 INFO  c.u.controller.MainController - Platform.exit
+17035 23:45:26.924 INFO  c.u.controller.MainController - System.exit(0)

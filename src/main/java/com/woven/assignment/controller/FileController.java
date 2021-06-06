@@ -1,8 +1,13 @@
 package com.woven.assignment.controller;
 
+
+import com.woven.assignment.exception.AssignmentException;
 import com.woven.assignment.exception.ErrorResponse;
+import com.woven.assignment.exception.FileSizeException;
 import com.woven.assignment.storage.StorageService;
 import org.apache.commons.io.FileUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.*;
@@ -25,7 +30,7 @@ import static com.woven.assignment.exception.ErrorMessages.WOVEN_FILE_SERVICE_SI
 @Controller
 public class FileController {
 
-
+    Logger logger = LoggerFactory.getLogger(FileController.class);
     private final StorageService storageService;
     private final String dnsName = "localhost:8080/files/";
     private final long MAX_FILE_SIZE = 512;//51_200_000;
@@ -38,10 +43,12 @@ public class FileController {
     public ResponseEntity<?> submit(@RequestParam("file") final MultipartFile file, final ModelMap modelMap) {
 
         modelMap.addAttribute("file", file);
-        if(file.getSize() >  MAX_FILE_SIZE)
-        {
-            return  ResponseEntity.badRequest().body(new ErrorResponse(WOVEN_FILE_SERVICE_SIZE_EXCEEDED_CODE, WOVEN_FILE_SERVICE_SIZE_EXCEEDED).toString());
+        logger.info("file upload name is {}", file.getName());
+        if(file.getSize() >  MAX_FILE_SIZE) {
+            throw new FileSizeException(new ErrorResponse(WOVEN_FILE_SERVICE_SIZE_EXCEEDED_CODE,
+                    WOVEN_FILE_SERVICE_SIZE_EXCEEDED));
         }
+
         storageService.store(file);
         return ResponseEntity.created(URI.create(dnsName + file.getName()) ).build();
     }
