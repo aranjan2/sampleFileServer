@@ -1,7 +1,5 @@
-package com.woven.command.impl;
+package com.woven.command;
 
-import com.woven.command.FSCommand;
-import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.HttpEntity;
@@ -9,33 +7,29 @@ import org.springframework.http.MediaType;
 import org.springframework.http.client.MultipartBodyBuilder;
 import org.springframework.stereotype.Component;
 import org.springframework.util.MultiValueMap;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.client.WebClient;
+import picocli.CommandLine;
 
 import java.io.File;
-
+import java.nio.file.Path;
+import java.util.List;
 
 @Component
-public class WebFSCommandImpl implements FSCommand {
-  private WebClient webClient;
-  Logger logger = LoggerFactory.getLogger(WebFSCommandImpl.class);
+@CommandLine.Command(
+        name = "upload",
+        description = "Uploads file to remote server")
+public class FileSystemUploadCmd implements Runnable {
+  org.slf4j.Logger logger = LoggerFactory.getLogger(FileSystemUploadCmd.class);
 
-  public WebFSCommandImpl() {
-    this.webClient = WebClient.builder().baseUrl(System.getenv("FS_SERVER_BASE")).build();
-  }
 
-  final static RestTemplate restTemplate = new RestTemplate();
-
-  @Override
-  public void delete(String fileName) {
-    logger.debug("Deleting file {}", fileName);
-
-  }
+  @CommandLine.Parameters(index = "0..*", description = "List of the files")
+  private List<Path> files;
 
   @Override
-  public void upload(String fileName) {
-    logger.debug("uploading file {}", fileName);
+  public void run() { // your business logic goes here...
+    logger.debug("uploading file {}", files);
+    var webClient = WebClient.builder().baseUrl(System.getenv("FS_SERVER_BASE")).build();
 
     try {
       webClient.post()
@@ -47,7 +41,9 @@ public class WebFSCommandImpl implements FSCommand {
               .block();
     } catch (Exception e) {
       System.out.println("Error Occured :" + e.getMessage());
+      System.exit(-1);
     }
+    System.exit(0);
   }
 
   public MultiValueMap<String, HttpEntity<?>> fromFile(File file) {
@@ -56,8 +52,4 @@ public class WebFSCommandImpl implements FSCommand {
     return builder.build();
   }
 
-  @Override
-  public void list(String pathPrefix) {
-    logger.debug("listing contents:");
-  }
 }
