@@ -28,7 +28,7 @@ import static com.woven.assignment.exception.ErrorMessages.WOVEN_FILE_SERVICE_SI
 
 
 @Controller
-@RequestMapping("/fileserver/files")
+@RequestMapping("/v1/fileserver/files")
 public class FileController {
 
     Logger logger = LoggerFactory.getLogger(FileController.class);
@@ -40,7 +40,7 @@ public class FileController {
         this.storageService = storageService;
     }
 
-    @RequestMapping(value = "/v1.0", method = RequestMethod.POST)
+    @RequestMapping( method = RequestMethod.POST)
     public ResponseEntity<?> submit(@RequestParam("file") final MultipartFile file, final ModelMap modelMap) {
 
         modelMap.addAttribute("file", file);
@@ -55,7 +55,7 @@ public class FileController {
     }
 
 
-    @GetMapping(value = "/v1.0", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping( produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<String>> list() {
            return ResponseEntity.ok(storageService.listAll());
     }
