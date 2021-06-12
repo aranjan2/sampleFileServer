@@ -25,11 +25,15 @@ public class FileSystemUploadCmd implements Runnable {
 
   @CommandLine.Parameters(index = "0..*", description = "List of the files")
   private List<Path> files;
+  private final WebClient webClient;
+
+  public FileSystemUploadCmd(WebClient webClient) {
+    this.webClient = webClient;
+  }
 
   @Override
   public void run() { // your business logic goes here...
     logger.debug("uploading file {}", files);
-    var webClient = WebClient.builder().baseUrl(System.getenv("FS_SERVER_BASE")).build();
 
     try {
       webClient.post()
