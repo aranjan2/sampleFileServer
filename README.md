@@ -31,8 +31,9 @@ Few other considerations in case of a web and distributed scenario are :
 
 
 ## Installation
-cd $(project_dir)
-docker-compose up
+prerequisite: Docker should be installed. It can be installed from https://www.docker.com/products/docker-desktop
+cd sampleFileServer
+docker-compose -f docker\docker-compose.yml up
 
 
 ## Usage
