@@ -1,6 +1,7 @@
 package com.woven.command;
 
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -26,6 +27,8 @@ public class FileSystemDeleteCmd implements Runnable {
     this.webClient = webClient;
   }
 
+  @Value("${server-url}")
+  private String serverUrl;
 
   @Override
   public void run() {
@@ -37,7 +40,7 @@ public class FileSystemDeleteCmd implements Runnable {
         System.out.print("[" + count.getAndIncrement() + "]  File=" + file);
         try {
           webClient.delete()
-                  .uri("http://localhost:8080/v1/fileserver/files/" + file)
+                  .uri(serverUrl+"/v1/fileserver/files/" + file)
                   .retrieve()
                   .bodyToMono(String.class)
                   .block();

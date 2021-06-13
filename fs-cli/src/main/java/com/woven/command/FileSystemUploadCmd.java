@@ -1,6 +1,7 @@
 package com.woven.command;
 
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.MediaType;
@@ -26,7 +27,11 @@ public class FileSystemUploadCmd implements Runnable {
 
   @CommandLine.Parameters(index = "0..*", description = "List of the files")
   private List<Path> files;
+
   private final WebClient webClient;
+
+  @Value("${server-url}")
+  private String serverUrl;
 
   public FileSystemUploadCmd(WebClient webClient) {
     this.webClient = webClient;
@@ -41,7 +46,7 @@ public class FileSystemUploadCmd implements Runnable {
       files.forEach(file -> {
         System.out.print("[" + count.getAndIncrement() + "]  File=" + file);
         webClient.post()
-                .uri("http://localhost:8080/v1/fileserver/files")
+                .uri(serverUrl + "/v1/fileserver/files")
                 .contentType(MediaType.MULTIPART_FORM_DATA)
                 .body(BodyInserters.fromMultipartData(fromFile(file.toFile())))
                 .retrieve()
