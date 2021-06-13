@@ -10,7 +10,7 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import picocli.CommandLine;
 
-@CommandLine.Command(name = "fs-cli",
+@CommandLine.Command(name = "fs-store",
         mixinStandardHelpOptions = true,
         version = "1.0",
         description = "FileSystem Server CLI"
@@ -35,11 +35,11 @@ public class Main implements CommandLineRunner {
   }
 
   @Override
-  public void run(String... args) throws Exception {
+  public void run(String... args){
     CommandLine commandLine = new CommandLine(new Main(fileSystemUploadCmd, fileSystemDeleteCmd, fileSystemListCmd));
     commandLine.addSubcommand("upload", fileSystemUploadCmd);
     commandLine.addSubcommand("delete", fileSystemDeleteCmd);
-    commandLine.addSubcommand("list", fileSystemDeleteCmd);
+    commandLine.addSubcommand("list", fileSystemListCmd);
     commandLine.parseWithHandler(new CommandLine.RunLast(), args);
     System.exit(0);
   }

@@ -5,6 +5,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import picocli.CommandLine;
 
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
+
 @Component
 @CommandLine.Command(
         name = "list",
@@ -14,7 +17,7 @@ public class FileSystemListCmd implements Runnable {
 
   private final WebClient webClient;
 
-  @CommandLine.Parameters(index = "0", description = "path prefix")
+  @CommandLine.Option(required = false, names = "prefix", description = "path prefix")
   private String prefix;
 
   public FileSystemListCmd(WebClient webClient) {
@@ -24,7 +27,21 @@ public class FileSystemListCmd implements Runnable {
   @Override
   public void run() {
     logger.debug("listing prefix {}", prefix);
-
+    System.out.println("Listing contents:");
+    try {
+      AtomicInteger count = new AtomicInteger(0);
+      webClient.get()
+              .uri("http://localhost:8080/v1/fileserver/files")
+              .retrieve()
+              .bodyToMono(List.class)
+              .block()
+              .forEach(file -> {
+                System.out.println("[" + count.incrementAndGet() + "] " + file);
+              });
+    } catch (Exception e) {
+      logger.error("Error listing files", e);
+      System.out.println("Failed with Error : " + e.getMessage());
+    }
   }
 
 

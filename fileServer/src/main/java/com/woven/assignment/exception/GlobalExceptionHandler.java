@@ -23,4 +23,10 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         logger.error("Unhandled excpetion", ex);
         return new ResponseEntity<Object>(new ErrorResponse("UNHANDLED_EXCEPTION", "something went wrong"), HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
+    @ExceptionHandler(FileNotFound.class)
+    protected ResponseEntity<Object> handleBadRequest(FileNotFound ex) {
+        logger.error("Unhandled excpetion", ex);
+        return new ResponseEntity<Object>(ex.getErrorResponse(), HttpStatus.NOT_FOUND);
+    }
 }

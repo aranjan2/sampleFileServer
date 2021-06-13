@@ -1,6 +1,7 @@
 package com.woven.assignment.storage;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
@@ -11,6 +12,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import com.woven.assignment.exception.ErrorResponse;
+import com.woven.assignment.exception.FileNotFound;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
@@ -69,6 +72,9 @@ public class FileSystemStorageService implements StorageService {
 	public void delete(String fileName) {
 		String fileSeparator= FileSystems.getDefault().getSeparator();
 		File file = new File(storageProperties.getLocation() + fileSeparator + fileName);
+		if (!file.exists()) {
+			throw new FileNotFound(new ErrorResponse("FILE_NOT_FOUND", fileName +"not Found"));
+		}
 		file.delete();
 	}
 
