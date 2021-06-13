@@ -48,6 +48,16 @@ TODO: Write usage instructions
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
+## Curl Examples
+
+Upload file to Server:
+
+curl -i -X POST -H "Content-Type: multipart/form-data" -F "file=@README.md" http://localhost:8080/v1/fileserver/files
+
+List Files from Server
+
+ curl localhost:8080/v1/fileserver/files
+
 ## History
 
 TODO: Write history
