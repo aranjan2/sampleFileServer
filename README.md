@@ -4,7 +4,7 @@ This is a fileserver based on remote filesystem. It provides an extensible desig
 including Managed service by cloud provider like AWS, Azure etc. This is a spring boot based 
 project with cli as well. This project also includes a simple cli for file upload operations.
 Few other considerations in case of a web and distributed scenario are : 
-###Security & Privacy
+### Security & Privacy
   * authentication/authorization-  User authentication and RBAC control
   * encryption - files could be encrypted in application level based on file sensitivity
   * encryption keys:- Encryption keys must be kept securely preferably a managed Key-vault
@@ -12,7 +12,7 @@ Few other considerations in case of a web and distributed scenario are :
   * signed url- there is no download url, but in case we implement that API, uri would be signed with an expiry
   certificates:-
 
-###Performance && Scale: 
+### Performance and Scale: 
   * Caching - To improve performance of APIs like list files
   * CDN:- Content delivery Network like AWS cloudfront for static downloads
   * Disks replicated in multiple availability zones( datacenter) in a region
@@ -22,7 +22,7 @@ Few other considerations in case of a web and distributed scenario are :
 ### Data Protection Compliance
    * File should not be leaving regional boundary without user consent
 
-###Availability ,Deployment & Disaster recovery:
+### Availability ,Deployment & Disaster recovery:
   Regional deployment with failover to different region
 
 
@@ -36,7 +36,7 @@ Run Following Command:
 - `cd sampleFileServer`
 - `docker-compose -f docker\docker-compose.yml up`
 
-####Build Locally
+#### Build Locally
 - Run `./mvnw install` Or `./mvnw.cmd` on Windows
 - Run Server using `./fs-server` for Linux/MacOS and `./fs-server.cmd` on Windows 
 ## CLI Usage
@@ -46,7 +46,7 @@ Run CLI locally
 
 fs-store scipt provides command to run jar produced in build step. Docker based image support can be added as well if need.
 
-####Note:
+#### Note:
 CLI also support pointing the server host URL by exporting environment variable `FS_STORE_HOST`. For Example `export FS_STORE_HOST=http://localhost:8080` on Linux/MacOs. 
 Similar support is available in Windows as well.
 
